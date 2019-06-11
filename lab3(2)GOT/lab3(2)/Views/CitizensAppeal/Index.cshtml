@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "CitizesAppeal";
+}
+
+<div class="row">
+    <div class="col-md-5">
+        <form method="post" action="citizesAppeal">
+            <div>
+                <label>Форма для заполнения</label>
+            </div>
+            <div>
+                <label>
+                    ФИО
+                    <input type="text" name="lfo" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Организация
+                    <input type="text" name="organization" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Цель запроса
+                    <input type="text" name="goalOfRequest" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="submit" value="Добавить" />
+                </label>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5">
+        обращения граждан
+        <table class="views">
+            @{
+                for (int i = 0; i < 5; i++)
+                {
+                    <tr>
+                        <td>ФИО @i</td>
+                        <td>Организация @i</td>
+                        <td>Цель запроса @i</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>

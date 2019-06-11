@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<div class="row">
+    <div class="col-md-5">
+        <form method="post" action="tvShow">
+            <div>
+                <label>Форма для заполнения</label>
+            </div>
+            <div>
+                <label>
+                    Название шоу
+                    <input type="text" name="nameShow" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Длительность
+                    <input type="text" name="duration" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Рейтинг
+                    <input type="text" name="rating" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Описание шоу
+                    <input type="text" name="descriptionShow" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="submit" value="Отправить" />
+                </label>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5">
+        Шоу
+        <table class="views">
+            @{
+                for (int i = 0; i < 5; i++)
+                {
+                    <tr>
+                        <td>Название шоу @i</td>
+                        <td>Длительность @i</td>
+                        <td>Рейтинг @i</td>
+                        <td>Описание шоу @i</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>

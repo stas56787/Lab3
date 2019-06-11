@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Genre";
+}
+<div class="row">
+    <div class="col-md-5">
+        <form method="post" action="genre">
+            <div>
+                <label>Форма для заполнения</label>
+            </div>
+            <div>
+                <label>
+                    Название жанра
+                    <input type="text" name="nameGenre" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Описание жанра
+                    <input type="text" name="descriptionOfGenre" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="submit" value="Отправить" />
+                </label>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5">
+        Жанры
+        <table class="views">
+            @{
+                for (int i = 0; i < 5; i++)
+                {
+            <tr>
+                <td>Название жанра @i</td>
+                <td>Описание жанра @i</td>
+            </tr>
+                }
+            }
+        </table>
+    </div>
+</div>

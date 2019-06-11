@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row content">
+    <div class="col-md-5">
+        <form method="post" action="scheduleForWeek">
+            <div>
+                <label>Форма для заполнения</label>
+            </div>
+            <div>
+                <label>
+                    Время начала
+                    <input type="text" name="startTime" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Приглашенные гости
+                    <input type="text" name="guestsEmployees" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="submit" value="Отправить" />
+                </label>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5">
+        Расписание
+        <table class="views">
+            <tr>
+                <td>Время начала</td>
+                <td>Приглашенные гости</td>
+            </tr>
+            <tr>
+                <td>Время начала</td>
+                <td>Приглашенные гости</td>
+            </tr>
+            <tr>
+                <td>Время начала</td>
+                <td>Приглашенные гости</td>
+            </tr>
+            <tr>
+                <td>Время начала</td>
+                <td>Приглашенные гости</td>
+            </tr>
+        </table>
+    </div>
+</div>
